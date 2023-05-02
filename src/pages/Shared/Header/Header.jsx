@@ -12,10 +12,11 @@ const Header = () => {
                 <Link className='mx-10' to={'/about'}>About</Link>
                 <Link className='mx-10' to={'/category'}>Category</Link>
                 <Link className='mx-10' to={'blog'}>Blog</Link>
+
             </div>
-            <div>
-                <button className="btn btn-gray">Login</button>
-            </div>
+            <Link to="/login" className="btn btn-gray">Login
+
+            </Link>
         </div>
     );
 };

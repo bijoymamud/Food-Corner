@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
 
@@ -36,16 +37,17 @@ const Login = () => {
             })
     }
     return (
-        <div>
-            <h3>Please Login</h3>
+        <div className='w-1/2 mb-96 mt-40
+        '>
+            <h3 className='text-3xl font-bold font-mono mb-10'>Please Login</h3>
 
-            <form onSubmit={handleLogIn}>
-                <div className="form-control">
-                    <label htmlFor="">Email</label>
-                    <input type="email" name='email' id='' placeholder='Your Email address' required />
-                    <label htmlFor="">Password</label>
-                    <input type={show ? "text" : "password"} name='password' placeholder='Your password' required />
-                    <p onClick={() => setShow(!show)}>
+            <form onSubmit={handleLogIn} >
+                <div className="form-control container">
+                    <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="">Email</label>
+                    <input type="text" placeholder="Enter email" className="input input-bordered input-primary w-full max-w-xs mb-5" />
+                    <label className='font-mono text-xl mb-2 w-1/2' htmlFor="">Password</label>
+                    <input type="text" placeholder="Enter password" className="input input-bordered input-primary w-full max-w-xs mb-5 " />
+                    <p onClick={() => setShow(!show)} >
                         <small>
                             {
                                 show ? <span>Hide Password</span> : <span>Show Password</span>
@@ -54,11 +56,11 @@ const Login = () => {
                         </small>
                     </p>
 
-                    {/* <input className='signup-btn'>Log In</input> */}
 
-                    <input className='login-btn' type="submit" value="Log In" />
-                    <p className='sub-title'>
-                        New to Food-Corner? <Link className='link' to="/signup">Create New Account</Link>
+
+                    <input className='btn btn-wide ' type="submit" value="Log In" />
+                    <p className='sub-title mt-4 font-bold text-gray-500'>
+                        New to Food-Corner? <Link className='link' to="/register"><span className='text-primary '>Create New Account</span></Link>
 
                     </p>
                 </div>
@@ -66,5 +68,6 @@ const Login = () => {
         </div>
     );
 };
+
 
 export default Login;
