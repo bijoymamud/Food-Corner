@@ -37,16 +37,16 @@ const Login = () => {
             })
     }
     return (
-        <div className='w-1/2 mb-96 mt-40
+        <div className='w-1/5 mb-96 mt-40 mx-auto
         '>
             <h3 className='text-3xl font-bold font-mono mb-10'>Please Login</h3>
 
             <form onSubmit={handleLogIn} >
-                <div className="form-control container">
+                <div className="form-control container ">
                     <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="">Email</label>
-                    <input type="text" placeholder="Enter email" className="input input-bordered input-primary w-full max-w-xs mb-5" />
+                    <input type="text" placeholder="Enter email" className="input input-bordered input-primary w-full  mb-5" />
                     <label className='font-mono text-xl mb-2 w-1/2' htmlFor="">Password</label>
-                    <input type="text" placeholder="Enter password" className="input input-bordered input-primary w-full max-w-xs mb-5 " />
+                    <input type={show ? "text" : "password"} placeholder="Enter password" className="input input-bordered input-primary w-full  mb-5 " />
                     <p onClick={() => setShow(!show)} >
                         <small>
                             {
@@ -58,7 +58,7 @@ const Login = () => {
 
 
 
-                    <input className='btn btn-wide ' type="submit" value="Log In" />
+                    <input className='btn btn-wide-full ' type="submit" value="Log In" />
                     <p className='sub-title mt-4 font-bold text-gray-500'>
                         New to Food-Corner? <Link className='link' to="/register"><span className='text-primary '>Create New Account</span></Link>
 

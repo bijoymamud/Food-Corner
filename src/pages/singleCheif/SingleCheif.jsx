@@ -6,19 +6,23 @@ const SingleCheif = ({ cheif }) => {
 
     return (
         <div className="card card-side bg-base-100 shadow-xl my-10">
-            <figure><img src={chef_picture} /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
+            <img className='w-2/4 rounded-lg' src={chef_picture} />
+            <div className="px-12 py-5">
+                <h2 className="card-title font-bold  text-2xl mb-12 ">
                     {chef_name}
-                    <div className="badge badge-secondary">NEW</div>
+
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
+
+
+                <p className=' font-semibold text-xl mb-2'><span className=' text-yellow-600'>Work Experience:</span> <span className='text-slate-500'>{years_of_experience}</span></p>
+                <p className='mb-2 font-semibold text-xl'><span className=' text-yellow-600'>Total Recipes:</span> <span className='text-slate-500' >{number_of_recipes}</span></p>
+                <p className=' font-semibold text-xl mb-2'><span className=' text-yellow-600' >Accivement:</span> <span className='text-red-600'>{likes}</span></p>
+                <div >
+                    <button className="btn mt-5 mb-5 p-1 w-full mx-auto">Fashion</button>
+
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

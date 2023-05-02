@@ -48,8 +48,11 @@ const Register = () => {
                     <div className="form-control">
                         <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="">Email</label>
                         <input type="text" name='email' placeholder="Enter email" className="input input-bordered input-primary w-full max-w-xs mb-5" required />
+                        <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="">Photo URL</label>
+                        <input type="text" name='photo' placeholder="Your URL" className="input input-bordered input-primary w-full max-w-xs mb-5" required />
                         <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="password">Password</label>
                         <input type="password" placeholder="Enter email" name='password' className="input input-bordered input-primary w-full max-w-xs mb-5" required />
+
                         <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="confirm">Confirm Password</label>
                         <input type="text" placeholder="Enter email" name='confirm' className="input input-bordered input-primary w-full max-w-xs mb-5" required />
 
