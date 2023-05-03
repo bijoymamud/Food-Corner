@@ -26,7 +26,7 @@ const NewRecipes = () => {
                     <figure><img className='rounded-lg' src="https://thefancypantskitchen.com/wp-content/uploads/2022/06/CHEESY-CRUNCHY-BEEF-TACOS4-600x400.jpg" alt="" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
-                            Chicken Parmesan
+                            Pasta Carbonara
                             <div className="badge badge-secondary">NEW</div>
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
@@ -40,7 +40,7 @@ const NewRecipes = () => {
                     <figure><img className='rounded-lg' src="https://salu-salo.com/wp-content/uploads/2017/03/Garlic-Shrimp-with-Chili-Sauce-1.jpg" alt="" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
-                            Chicken Parmesan
+                            Beef Tacos
                             <div className="badge badge-secondary">NEW</div>
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
@@ -54,7 +54,7 @@ const NewRecipes = () => {
                     <figure><img className='rounded-lg' src="https://theculturecook.com/recipes/photos/small_16129608-F23B-3111-21577E11117D37B3.jpg" alt="" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
-                            Chicken Parmesan
+                            Garlic Shrimp
                             <div className="badge badge-secondary">NEW</div>
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
@@ -68,7 +68,7 @@ const NewRecipes = () => {
                     <figure><img className='rounded-lg' src="https://www.melskitchencafe.com/wp-content/uploads/caesar-salad2-600x400.jpg" alt="" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
-                            Chicken Parmesan
+                            Classic Caesar Salad
                             <div className="badge badge-secondary">NEW</div>
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
@@ -82,7 +82,7 @@ const NewRecipes = () => {
                     <figure> <img className='rounded-lg' src="https://oran-mor.co.uk/wp-content/uploads/2023/02/fonn-mor-6-600x400.jpeg" alt="" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
-                            Chicken Parmesan
+                            Fish Parmesan
                             <div className="badge badge-secondary">NEW</div>
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>

@@ -7,6 +7,7 @@ import Register from "../pages/Register/Register";
 
 import ViewReceipe from "../pages/ViewReceipe/ViewReceipe";
 
+import Error from "../pages/foroff/Error";
 import OurCheif from "../pages/ourCheif/OurCheif";
 import PrivateRoutes from "./PrivateRoutes";
 
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             }
         ]
+    },
+
+    {
+        path: '*',
+        element: <Error></Error>
     },
 
     {
