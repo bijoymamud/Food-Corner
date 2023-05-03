@@ -13,15 +13,15 @@ const Header = () => {
             .catch(error => console.log(error))
     }
     return (
-        <div className='flex justify-evenly mx-auto'>
+        <div className='flex items-center justify-between md:mx-auto container'>
             <div>
-                <h3>Food Corner</h3>
+                <h3 className='text-xl'>Food  Corner</h3>
             </div>
             <div  >
-                <Link className='mx-10' to={'/'}>Home</Link>
-                <Link className='mx-10' to={'/about'}>About</Link>
-                <Link className='mx-10' to={'/category'}>Category</Link>
-                <Link className='mx-10' to={'blog'}>Blog</Link>
+                <Link className='mr-2 md:mx-10' to={'/'}><span className='font-bold'>Home</span></Link>
+                <Link className='mr-2 md:mx-10' to={'/about'}><span className='font-bold'>About</span></Link>
+                <Link className=' mr-2 md:mx-10' to={'/category'}><span className='font-bold'>Category</span></Link>
+                <Link className=' mr-2md:mx-10' to={'blog'}><span className='font-bold'>Blog</span></Link>
 
             </div>
             <div className='flex items-center gap-5'>

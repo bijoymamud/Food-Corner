@@ -6,6 +6,8 @@ import { AuthContext } from '../../providers/AuthProvider';
 const Login = () => {
 
     const [show, setShow] = useState(false);
+    // const [error, setError] = useState('');
+
     const { singIn, setUser, GoogleLogin, GithubLogin } = useContext(AuthContext);
 
     const navigate = useNavigate();
@@ -35,6 +37,13 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+
+        // if (password !== confirm) {
+        //     //match na hle error dewa uchit. r error dite hle state declare korte hoy.
+        //     setError('Incorrect password');
+        //     return;
+
+        // }
 
         singIn(email, password)
             .then(result => {

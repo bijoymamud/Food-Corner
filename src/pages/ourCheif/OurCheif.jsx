@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleCheif from '../../pages/singleCheif/SingleCheif';
+import NewRecipes from '../newrecipes/NewRecipes';
 
 const OurCheif = () => {
 
@@ -16,7 +17,7 @@ const OurCheif = () => {
         <div>
             <h2>Cheifs Introduction</h2>
 
-            <div className='md:grid grid-cols-2 gap-10 container mx-auto mb-64 mt-10'>
+            <div className=' mx-auto md:grid grid-cols-2 gap-10 container mb-64 mt-10 md:container'>
                 {
                     cheifs.map(cheif => <SingleCheif
 
@@ -26,6 +27,7 @@ const OurCheif = () => {
                     ></SingleCheif>)
                 }
             </div>
+            <NewRecipes></NewRecipes>
         </div>
     );
 };

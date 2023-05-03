@@ -6,7 +6,9 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 
 import ViewReceipe from "../pages/ViewReceipe/ViewReceipe";
+
 import OurCheif from "../pages/ourCheif/OurCheif";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -38,13 +40,16 @@ const router = createBrowserRouter([
             {
                 path: '/home',
                 element: <OurCheif></OurCheif>
-            }
+            },
+
         ]
     },
 
     {
         path: 'allCheifs',
-        element: <RecipiLayout></RecipiLayout>,
+        element: <PrivateRoutes>
+            <RecipiLayout></RecipiLayout>
+        </PrivateRoutes>,
         children: [
             {
                 path: ':id',

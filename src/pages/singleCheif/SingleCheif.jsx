@@ -6,8 +6,8 @@ const SingleCheif = ({ cheif }) => {
     const { id, chef_picture, chef_name, years_of_experience, number_of_recipes, likes } = cheif;
 
     return (
-        <div className="card card-side bg-base-100 shadow-xl my-10">
-            <img className='w-2/4 rounded-lg' src={chef_picture} />
+        <div className=" h-3/4 card card-side bg-base-100 shadow-xl my-10">
+            <img className='  w-2/4 md:w-2/4 rounded-lg' src={chef_picture} />
             <div className="px-12 py-5">
                 <h2 className="card-title font-bold  text-2xl mb-12 ">
                     {chef_name}
