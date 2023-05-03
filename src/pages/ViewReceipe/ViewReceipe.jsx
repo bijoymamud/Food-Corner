@@ -1,17 +1,32 @@
-import React from 'react';
-import { FaRegStar, FaStar } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaGenderless, FaHeart, FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData } from 'react-router-dom';
 
 const ViewReceipe = () => {
+
+    const [liked, setLiked] = useState(false);
+    const [numLikes, setNumLikes] = useState(0);
+
+    const handleLikeClick = (index) => {
+        console.log(index);
+        if (liked) {
+            setLiked(false);
+            setNumLikes(numLikes - 1);
+        } else {
+            setLiked(true);
+            setNumLikes(numLikes + 1);
+        }
+    };
+
     const viewItems = useLoaderData();
     const { chef_picture, chef_name, years_of_experience, number_of_recipes, chef_bio, rating } = viewItems;
     // console.log(viewItems);
     const receipies = viewItems.recipes.map(reciepe => reciepe)
-    console.log(receipies);
+    // console.log(receipies);
 
-    const items = receipies?.ingredients?.map(iteem => console.log(iteem))
-    console.log(items);
+    // const items = receipies?.ingredients?.map(iteem => console.log(iteem))
+    // console.log(items);
 
 
 
@@ -46,14 +61,20 @@ const ViewReceipe = () => {
                 {viewItems?.recipes?.map((recipe, index) => (
                     <div className=' mb-3 p-5 bg-cyan-200 rounded-md shadow-xl' key={index}>
                         <h4 ><span className='text-2xl font-bold mt-4'>{recipe?.recipeName}</span></h4>
-                        <ul>
+                        <ul className='mt-3'>
 
                             {recipe?.ingredients?.map((ingredient, index) => (
-                                <p key={index}><li>{ingredient}</li></p>
+                                <li key={index} className=' ms-5 card-actions justify-start items-center'>{""}
+                                    <FaGenderless></FaGenderless>{ingredient}
+
+                                </li>
 
                             ))}
 
                         </ul>
+                        <div>
+                            <FaHeart onClick={() => handleLikeClick(index)} className={`${liked ? "text-red-600" : "text-gray-500"}`}></FaHeart>
+                        </div>
                     </div>
                 ))}
             </div>

@@ -15,9 +15,9 @@ const OurCheif = () => {
 
     return (
         <div>
-            <h2>Cheifs Introduction</h2>
+            <h2 className=' mt-20 text-center text-4xl font-bold md:mt-20'>Cheifs Introduction</h2>
 
-            <div className=' mx-auto md:grid grid-cols-2 gap-10 container md:mb-64 mt-10 md:container'>
+            <div className=' mx-auto md:grid grid-cols-2 md:gap-10 container md:mb-64 px-1 md:container'>
                 {
                     cheifs.map(cheif => <SingleCheif
 

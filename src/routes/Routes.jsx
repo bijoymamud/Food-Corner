@@ -8,6 +8,7 @@ import Register from "../pages/Register/Register";
 import ViewReceipe from "../pages/ViewReceipe/ViewReceipe";
 
 import About from "../pages/About/About";
+import Blog from "../pages/Blog/Blog";
 import Error from "../pages/foroff/Error";
 import OurCheif from "../pages/ourCheif/OurCheif";
 import PrivateRoutes from "./PrivateRoutes";
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
     {
         path: '/about',
         element: <About></About>
+    },
+
+    {
+        path: '/blog',
+        element: <Blog></Blog>
     },
 
     {

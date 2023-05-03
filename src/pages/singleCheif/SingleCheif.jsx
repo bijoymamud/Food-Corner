@@ -8,7 +8,7 @@ const SingleCheif = ({ cheif }) => {
     return (
         <div className="mx-3 h-3/4 card card-side bg-base-100 shadow-xl my-10">
             <img className='  w-2/4 md:w-2/4 rounded-lg' src={chef_picture} />
-            <div className="px-12 py-5">
+            <div className=" ps-2 md:px-12 py-5">
                 <h2 className="card-title font-bold  text-2xl mb-12 ">
                     {chef_name}
 

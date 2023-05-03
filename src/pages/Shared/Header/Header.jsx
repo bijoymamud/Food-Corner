@@ -30,7 +30,7 @@ const Header = () => {
                     <a className="btn btn-ghost normal-case text-xl">Food Corner</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 gap-3">
+                    <ul className="menu menu-horizontal px-1 gap-10">
                         <NavLink to='/' className={({ isActive }) => (isActive ? "text-red-500" : "")}>Home</NavLink>
                         <NavLink to='/blog' className={({ isActive }) => (isActive ? "underline" : "")}> Blog</NavLink>
                         <NavLink to='/about' className={({ isActive }) => (isActive ? "" : "")}>About</NavLink>
@@ -39,8 +39,8 @@ const Header = () => {
                 <div className="navbar-end">
                     <div className='flex items-center gap-5'>
                         {user &&
-                            <div className="tooltip  tooltip-left" data-tip={user.displayName}>
-                                <button>  <img className='h-10 w-10' src={user?.photoURL} alt="" /> </button>
+                            <div className="tooltip  tooltip-left mt-3" data-tip={user.displayName}>
+                                <button>  <img className='h-12 w-12' src={user?.photoURL} alt="" /> </button>
                             </div>
                         }
 
