@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleCheif = ({ cheif }) => {
 
-    const { chef_picture, chef_name, years_of_experience, number_of_recipes, likes } = cheif;
+    const { id, chef_picture, chef_name, years_of_experience, number_of_recipes, likes } = cheif;
 
     return (
         <div className="card card-side bg-base-100 shadow-xl my-10">
@@ -16,9 +17,9 @@ const SingleCheif = ({ cheif }) => {
 
                 <p className=' font-semibold text-xl mb-2'><span className=' text-yellow-600'>Work Experience:</span> <span className='text-slate-500'>{years_of_experience}</span></p>
                 <p className='mb-2 font-semibold text-xl'><span className=' text-yellow-600'>Total Recipes:</span> <span className='text-slate-500' >{number_of_recipes}</span></p>
-                <p className=' font-semibold text-xl mb-2'><span className=' text-yellow-600' >Accivement:</span> <span className='text-red-600'>{likes}</span></p>
+                <p className=' font-semibold text-xl  mb-2'><span className=' text-yellow-600' >Likes:</span> <span className='text-red-600'> {likes}</span></p>
                 <div >
-                    <button className="btn mt-5 mb-5 p-1 w-full mx-auto">Fashion</button>
+                    <Link to={`/allCheifs/${id}`} className="btn mt-5 mb-5 p-1 w-full mx-auto">View Recipe</Link>
 
                 </div>
             </div>

@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Register = () => {
+    const navigate = useNavigate();
     const [error, setError] = useState('');
     const { createUser } = useContext(AuthContext);
+    const from = location.state?.form?.pathname || '/';
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -32,6 +34,8 @@ const Register = () => {
             .then(result => {
                 const loggesUser = result.user;
                 console.log(loggesUser);
+                form.reset();
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error);
@@ -40,25 +44,25 @@ const Register = () => {
     }
 
     return (
-        <div className='w-1/2 mb-96 mt-40
-       '>
+        <div className=' p-10 mt-5 md:w-2/5 md:mb-96 md:mt-28 mx-auto
+        '>
             <div className='form-container'>
-                <h2 className='form-titile text-3xl font-bold font-mono mb-10'>Sign Up </h2>
+                <h2 className='form-titile text-3xl font-bold font-mono mb-10 text-center'>Sign Up </h2>
                 <form onSubmit={handleSignUp}>
                     <div className="form-control">
                         <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="">Email</label>
-                        <input type="text" name='email' placeholder="Enter email" className="input input-bordered input-primary w-full max-w-xs mb-5" required />
+                        <input type="text" name='email' placeholder="Enter email" className="input input-bordered input-primary w-full  mb-5" required />
                         <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="">Photo URL</label>
-                        <input type="text" name='photo' placeholder="Your URL" className="input input-bordered input-primary w-full max-w-xs mb-5" required />
+                        <input type="text" name='photo' placeholder="Your URL" className="input input-bordered input-primary w-full  mb-5" required />
                         <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="password">Password</label>
-                        <input type="password" placeholder="Enter email" name='password' className="input input-bordered input-primary w-full max-w-xs mb-5" required />
+                        <input type="password" placeholder="Enter email" name='password' className="input input-bordered input-primary w-full mb-5" required />
 
                         <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="confirm">Confirm Password</label>
-                        <input type="text" placeholder="Enter email" name='confirm' className="input input-bordered input-primary w-full max-w-xs mb-5" required />
+                        <input type="password" placeholder="Enter email" name='confirm' className="input input-bordered input-primary w-full  mb-5" required />
 
                         {/* <input className='signup-btn'>Log In</input> */}
 
-                        <input className='btn btn-wide ' type="submit" value="Register" />
+                        <input className='btn btn-wide w-full' type="submit" value="Register" />
 
                         <p className='sub-title sub-title mt-4 font-bold text-gray-500'>Already have an account? <Link className='link' to="/login"><span className='text-primary '>Login</span></Link></p>
 
