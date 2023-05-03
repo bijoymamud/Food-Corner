@@ -6,7 +6,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 const Login = () => {
 
     const [show, setShow] = useState(false);
-    // const [error, setError] = useState('');
+    const [error, setError] = useState('');
 
     const { singIn, setUser, GoogleLogin, GithubLogin } = useContext(AuthContext);
 
@@ -17,14 +17,18 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
         GoogleLogin()
-            .then(result => console.log(result))
+            .then(result => navigate(from, {
+                replace: true
+            }))
             .catch(error => console.log(error.message))
     }
 
     const handleGithubLogin = () => {
         GithubLogin()
-            .then(result => console.log(result))
-            .error(error => console.log(error.message))
+            .then(result => navigate(from, {
+                replace: true
+            }))
+            .catch(error => console.log(error.message))
     }
 
     const handleLogIn = event => {
@@ -38,12 +42,8 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
-        // if (password !== confirm) {
-        //     //match na hle error dewa uchit. r error dite hle state declare korte hoy.
-        //     setError('Incorrect password');
-        //     return;
 
-        // }
+
 
         singIn(email, password)
             .then(result => {
@@ -55,7 +55,7 @@ const Login = () => {
                 navigate(from, { replace: true })
             })
             .catch(error => {
-                console.log(error.message);
+                setError("Incorrect Password");
             })
     }
     return (
@@ -81,6 +81,7 @@ const Login = () => {
 
 
                     <input className='btn btn-wide-full ' type="submit" value="Log In" />
+                    <p className='text-red-500'>{error}</p>
                     <p className='sub-title mt-4 font-bold text-gray-500'>
                         New to Food-Corner? <Link className='link' to="/register"><span className='text-primary '>Create New Account</span></Link>
 

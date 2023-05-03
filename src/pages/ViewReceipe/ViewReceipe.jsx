@@ -47,9 +47,12 @@ const ViewReceipe = () => {
                     <div className=' mb-3 p-5 bg-cyan-200 rounded-md shadow-xl' key={index}>
                         <h4 ><span className='text-2xl font-bold mt-4'>{recipe?.recipeName}</span></h4>
                         <ul>
+
                             {recipe?.ingredients?.map((ingredient, index) => (
-                                <li key={index}>{ingredient}</li>
+                                <p key={index}><li>{ingredient}</li></p>
+
                             ))}
+
                         </ul>
                     </div>
                 ))}

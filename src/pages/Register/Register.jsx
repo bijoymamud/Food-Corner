@@ -14,6 +14,8 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.confirm.value;
+        const photo = form.photo.value;
+        const name = form.displayName.value;
 
         setError('');
 
@@ -31,15 +33,19 @@ const Register = () => {
         }
 
         createUser(email, password)
-            .then(result => {
-                updateProfilePic();
+            .then((result) => {
+                updateProfilePic(name, photo)
+                    .then(folafol => {
+                        console.log(folafol);
+                        const loggesUser = result.user;
+                        console.log(loggesUser);
+                        form.reset();
+                        navigate(from, { replace: true })
+
+                    })
 
 
 
-                const loggesUser = result.user;
-                console.log(loggesUser);
-                form.reset();
-                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error);
@@ -58,6 +64,9 @@ const Register = () => {
                         <input type="text" name='email' placeholder="Enter email" className="input input-bordered input-primary w-full  mb-5" required />
                         <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="">Photo URL</label>
                         <input type="text" name='photo' placeholder="Your URL" className="input input-bordered input-primary w-full  mb-5" required />
+
+                        <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="">Name</label>
+                        <input type="text" name='displayName' placeholder="Your Name" className="input input-bordered input-primary w-full  mb-5" required />
                         <label className='font-mono text-xl mb-2 w-1/2 ' htmlFor="password">Password</label>
                         <input type="password" placeholder="Enter email" name='password' className="input input-bordered input-primary w-full mb-5" required />
 
@@ -66,7 +75,7 @@ const Register = () => {
 
                         {/* <input className='signup-btn'>Log In</input> */}
 
-                        <input className='btn btn-wide w-full' type="submit" value="Register" />
+                        <input className='btn  w-full' type="submit" value="Register" />
 
                         <p className='sub-title sub-title mt-4 font-bold text-gray-500'>Already have an account? <Link className='link' to="/login"><span className='text-primary '>Login</span></Link></p>
 
