@@ -1,12 +1,21 @@
 import React from 'react';
+import Pdf from "react-to-pdf";
 import Header from '../Shared/Header/Header';
+
+
+const ref = React.createRef();
 
 const Blog = () => {
     return (
         <div>
             <Header></Header>
             <div >
-                <div className='bg-slate-50 mt-14 md:mt-24 p-4 md:p-10 md:mx-36 '>
+                <Pdf targetRef={ref} filename='code-example.pdf'>
+                    {({ toPdf }) => (
+                        <button className="btn btn-wide md:ms-36 mt-3" onClick={toPdf}>Click to Download</button>
+                    )}
+                </Pdf>
+                <div ref={ref} className=' bg-slate-50 mt-14 md:mt-24 p-4 md:p-10 md:mx-36 md:mb-24 '>
                     <div className=' mt-8 p-4 md:p-10 bg-gray-200 mb-4 rounded-lg shadow-lg '>
                         <h3 className='text-2xl mb-4 font-bold'>Differences between uncontrolled and controlled components. ?</h3>
                         <p className='text-gray-600'>Controlled components manage form element state using React's component state, while uncontrolled components rely on the DOM for state management. Controlled components have one-way data flow, with changes triggering events and updating the parent component's state. Uncontrolled components have two-way data flow, allowing direct changes to the form element. The choice depends on specific needs: controlled components offer control and predictability, while uncontrolled components provide flexibility and simplicity.</p>

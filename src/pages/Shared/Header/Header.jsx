@@ -16,7 +16,7 @@ const Header = () => {
         <div>
 
 
-            <div className="navbar bg-base-200">
+            <div className="navbar bg-base-200 md:px-20">
                 <div className="navbar-start  mx-auto">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
