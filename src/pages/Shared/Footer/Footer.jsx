@@ -10,7 +10,7 @@ const Footer = () => {
 
                         <p><small className='text-zinc-400'>There are many variations of passages  of Lorem Ipsum ,<br /> but the majority have <br /> suffered alteration in some form.</small></p>
                         <div className='md:mt-5'>
-                            <img src="../../../public/Icons/Group 9969.png" alt="" />
+
 
                         </div>
 

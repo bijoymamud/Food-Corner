@@ -60,6 +60,7 @@ const ViewReceipe = () => {
             <div className=' md:grid grid-cols-3 mt-10 md:gap-5' >
                 {viewItems?.recipes?.map((recipe, index) => (
                     <div className=' mb-3 p-5 bg-cyan-200 rounded-md shadow-xl' key={index}>
+
                         <h4 ><span className='text-2xl font-bold mt-4'>{recipe?.recipeName}</span></h4>
                         <ul className='mt-3'>
 
@@ -72,7 +73,7 @@ const ViewReceipe = () => {
                             ))}
 
                         </ul>
-                        <div>
+                        <div className=' ms-96 md:ms-44'>
                             <FaHeart onClick={() => handleLikeClick(index)} className={`${liked ? "text-red-600" : "text-gray-500"}`}></FaHeart>
                         </div>
                     </div>

@@ -8,26 +8,42 @@ const Blog = () => {
             <div >
                 <div className='bg-slate-50 mt-14 md:mt-24 p-4 md:p-10 md:mx-36 '>
                     <div className=' mt-8 p-4 md:p-10 bg-gray-200 mb-4 rounded-lg shadow-lg '>
-                        <h3 className='text-2xl mb-4 font-bold'>When should we use Context API ?</h3>
-                        <p className='text-gray-600'>The Context API in React is a powerful tool that allows to manage state that needs to be shared between components in a hierarchical manner. It is particularly useful when have data or state that needs to be accessed by many components at different levels of the component tree, or when have a complex component hierarchy where passing props through every level of the tree becomes tedious and error-prone.
-
-                            Using the Context API can help avoid the problem of prop drilling, which can occur when  have data or state that needs to be updated by multiple components, but passing the props down through each level of the component tree becomes unwieldy. Instead, can use the Context API to make the data or state available to all components that need it, without having to pass it down manually.
-
-                            Additionally, the Context API can be useful when have data or state that needs to be accessed or updated by components that are not necessarily siblings. In such cases, using the Context API can simplify code and make it easier to manage the state.
-
-                            In summary, the Context API is a powerful tool that can help manage state in complex React applications. It is especially useful when have data or state that needs to be shared between components in a hierarchical manner, or when passing props down through each level of the component tree becomes tedious or error-prone.</p>
+                        <h3 className='text-2xl mb-4 font-bold'>Differences between uncontrolled and controlled components. ?</h3>
+                        <p className='text-gray-600'>Controlled components manage form element state using React's component state, while uncontrolled components rely on the DOM for state management. Controlled components have one-way data flow, with changes triggering events and updating the parent component's state. Uncontrolled components have two-way data flow, allowing direct changes to the form element. The choice depends on specific needs: controlled components offer control and predictability, while uncontrolled components provide flexibility and simplicity.</p>
                     </div>
                     <div className=' mt-8 p-4 md:p-10 bg-gray-200 mb-4 rounded-lg shadow-lg '>
-                        <h3 className='text-2xl mb-4 font-bold'>What is custom Hook ?</h3>
-                        <p className='text-gray-600'>Custom hooks allow to encapsulate and abstract away the implementation details of stateful logic, making code more modular and reusable. They also make it easier to share stateful logic between different components or even different projects.
-
-                            To create a custom hook, simply define a JavaScript function that uses React hooks, just like would define a regular React component. The only difference is that instead of rendering JSX, the custom hook returns any data or functions that the consuming component needs to use.</p>
+                        <h3 className='text-2xl mb-4 font-bold'>How to validate React props using PropTypes ?</h3>
+                        <ul className='text-gray-600'>
+                            <li>
+                                <span className='font-bold'>PropTypes.any :</span> The prop can be of any data type.
+                            </li>
+                            <li>
+                                <span className='font-bold'>PropTypes.bool :</span> The prop should be a Boolean.
+                            </li>
+                            <li>
+                                <span className='font-bold'>  PropTypes.number :</span> The prop should be a number.
+                            </li>
+                            <li>
+                                <span className='font-bold'> PropTypes.string :</span> The prop should be a string.
+                            </li>
+                        </ul>
                     </div>
                     <div className=' mt-8 p-4 md:p-10 bg-gray-200 mb-4 rounded-lg shadow-lg '>
-                        <h3 className='text-2xl mb-4 font-bold'> What is useRef and useMemo ?</h3>
-                        <p className='text-gray-600'>useRef and useMemo are both React hooks that can be used to optimize the performance of your application.
+                        <h3 className='text-2xl mb-4 font-bold'> What  difference between node js and express js ?</h3>
+                        <p className='text-gray-600'><span className='font-bold'>Node.js:</span> <br />
+                            Node.js is a runtime environment that allows you to execute JavaScript code outside of the browser. It is built on the Chrome V8 JavaScript engine and provides an event-driven, non-blocking I/O model. Node.js enables server-side development by providing a runtime environment that allows you to build scalable and high-performance applications using JavaScript. <br />
 
-                            useRef is a hook that returns a mutable ref object whose .current property can be set to any value. The primary use case for useRef is to access and manipulate the DOM or to store a value that persists across renders without triggering a re-render. For example, we can use useRef to access the value of an input field, or to store a value that needs to persist across renders, but doesn't affect the UI.</p>
+                            <span className='font-bold'>Express.js:</span> <br />
+
+                            Express.js is a web application framework built on top of Node.js. It provides a set of features and tools that simplify the process of building web applications and APIs. Express.js is lightweight and unopinionated, which means it gives you the flexibility to structure and design your application as you see fit. It provides routing capabilities, middleware support, and integrates well with various templating engines and databases.
+                        </p>
+                    </div>
+                    <div className=' mt-8 p-4 md:p-10 bg-gray-200 mb-4 rounded-lg shadow-lg '>
+                        <h3 className='text-2xl mb-4 font-bold'> What  difference between node js and express js ?</h3>
+                        <p className='text-gray-600'>Custom hooks are created to achieve several purposes. Firstly, they enhance reusability by extracting logic that can be shared across multiple components, preventing code duplication. By creating custom hooks, you can abstract away intricate implementation details, making the codebase easier to understand and maintain.
+
+                            Custom hooks are particularly useful for handling stateful logic. They enable you to share state management between components without relying on class components or prop drilling. You can leverage built-in hooks such as useState, useEffect, useContext, or create your own custom hooks to encapsulate specific functionality.
+                        </p>
                     </div>
 
                 </div>

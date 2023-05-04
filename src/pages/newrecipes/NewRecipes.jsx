@@ -1,4 +1,5 @@
 import React from 'react';
+import Services from '../Services/Services';
 
 const NewRecipes = () => {
     return (
@@ -7,7 +8,7 @@ const NewRecipes = () => {
 
 
 
-            <div className=' p-8  mx-auto md:grid grid-cols-3 gap-10 container md:mb-64 md:mt-10 md:container'>
+            <div className=' p-8  mx-auto md:grid grid-cols-3 gap-10 container md:mb-24 md:mt-10 md:container'>
                 <div className=" bg-base-100 rounded-lg shadow-xl mb-8 ">
                     <figure><img className='rounded-lg' src="https://static01.nyt.com/images/2022/01/26/dining/24AIRFRYERREX1-chicken-parmesan/merlin_200287671_7c6f509b-af22-4086-a2b8-4f36a58ffbec-articleLarge.jpg" alt="" /></figure>
                     <div className="card-body">
@@ -93,6 +94,7 @@ const NewRecipes = () => {
                     </div>
                 </div>
             </div>
+            <Services></Services>
 
 
 
