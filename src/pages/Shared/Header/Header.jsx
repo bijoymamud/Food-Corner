@@ -28,7 +28,7 @@ const Header = () => {
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-3xl font-extrabold font-mono">Food Corner</a>
+                    <a className="btn btn-ghost normal-case md:text-3xl font-extrabold font-mono">Food Corner</a>
                 </div>
                 <div className="navbar-center hidden lg:flex items-center gap-24">
 

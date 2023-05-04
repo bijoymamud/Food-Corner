@@ -7,7 +7,7 @@ const OurCheif = () => {
     const [cheifs, setSheifs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allCheifs')
+        fetch('https://food-corner-server-bijoymamud.vercel.app/allCheifs')
             .then(res => res.json())
             .then(data => setSheifs(data))
             .catch(error => console.error(error))

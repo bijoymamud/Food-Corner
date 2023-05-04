@@ -72,7 +72,7 @@ const router = createBrowserRouter([
             {
                 path: ':id',
                 element: <ViewReceipe></ViewReceipe>,
-                loader: ({ params }) => fetch(`http://localhost:5000/allCheifs/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-corner-server-bijoymamud.vercel.app/allCheifs/${params.id}`)
             }
         ]
     }

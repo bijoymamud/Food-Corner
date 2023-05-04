@@ -7,23 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ViewReceipe = () => {
 
-    const [liked, setLiked] = useState(false);
-    const [numLikes, setNumLikes] = useState(0);
 
-    const handleLikeClick = (index) => {
-        console.log(index);
-        if (liked) {
-            setLiked(false);
-            setNumLikes(numLikes - 1);
 
-        } else {
-            setLiked(true);
-            setNumLikes(numLikes + 1);
-            toast.success("Successfully added ", {
-                position: "top-center"
-            });
-        }
-    };
+
 
     const viewItems = useLoaderData();
     const { chef_picture, chef_name, years_of_experience, number_of_recipes, chef_bio, rating } = viewItems;
@@ -33,7 +19,16 @@ const ViewReceipe = () => {
 
     // const items = receipies?.ingredients?.map(iteem => console.log(iteem))
     // console.log(items);
+    const [isDisable, setDisable] = useState([]);
 
+    const handleLikeClick = id => {
+        const selected = [...isDisable, id];
+        setDisable(selected);
+        console.log(id, selected);
+        toast.success("Successfully added ", {
+            position: "top-center"
+        });
+    };
 
 
     return (
@@ -79,9 +74,9 @@ const ViewReceipe = () => {
                             ))}
 
                         </ul>
-                        <div className=' ms-96 md:ms-44'>
-                            <FaHeart onClick={() => handleLikeClick(index)} className={`${liked ? "text-red-600" : "text-gray-500"}`}></FaHeart>
-                        </div>
+                        <button disabled={isDisable.find(d => d === index)} onClick={() => handleLikeClick(index)} className=' ms-96 md:ms-44'>
+                            <FaHeart ></FaHeart>
+                        </button>
                     </div>
                 ))}
             </div>
