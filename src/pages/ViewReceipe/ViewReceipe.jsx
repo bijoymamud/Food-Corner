@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FaGenderless, FaHeart, FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ViewReceipe = () => {
 
@@ -13,9 +15,13 @@ const ViewReceipe = () => {
         if (liked) {
             setLiked(false);
             setNumLikes(numLikes - 1);
+
         } else {
             setLiked(true);
             setNumLikes(numLikes + 1);
+            toast.success("Successfully added ", {
+                position: "top-center"
+            });
         }
     };
 
@@ -79,6 +85,7 @@ const ViewReceipe = () => {
                     </div>
                 ))}
             </div>
+            <ToastContainer />
         </div >
 
     );

@@ -4,6 +4,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 
 const Header = () => {
+
     const { user, logOut } = useContext(AuthContext);
 
     const handleLogout = () => {
