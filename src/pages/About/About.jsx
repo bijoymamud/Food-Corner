@@ -6,7 +6,9 @@ const About = () => {
         <div>
             <Header></Header>
 
-            <h3>Avout</h3>
+            <div className='container mx-auto'>
+                <h3>Avout</h3>
+            </div>
         </div>
     );
 };
