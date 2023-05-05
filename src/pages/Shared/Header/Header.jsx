@@ -27,6 +27,16 @@ const Header = () => {
 
 
                         </ul>
+                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <NavLink to="/about" className={(isActive) => (isActive ? "underline" : "")}>About</NavLink>
+
+
+                        </ul>
+                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <NavLink to="/blog" className={(isActive) => (isActive ? "underline" : "")}>Blog</NavLink>
+
+
+                        </ul>
                     </div>
                     <a className="btn btn-ghost normal-case md:text-3xl font-extrabold font-mono">Food Corner</a>
                 </div>
