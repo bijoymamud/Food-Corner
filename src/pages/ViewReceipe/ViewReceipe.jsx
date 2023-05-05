@@ -11,6 +11,7 @@ const ViewReceipe = () => {
 
 
 
+
     const viewItems = useLoaderData();
     const { chef_picture, chef_name, years_of_experience, number_of_recipes, chef_bio, rating } = viewItems;
     // console.log(viewItems);
@@ -22,13 +23,16 @@ const ViewReceipe = () => {
     const [isDisable, setDisable] = useState([]);
 
     const handleLikeClick = id => {
+
         const selected = [...isDisable, id];
         setDisable(selected);
         console.log(id, selected);
+
         toast.success("Successfully added ", {
             position: "top-center"
         });
     };
+
 
 
     return (
@@ -60,7 +64,7 @@ const ViewReceipe = () => {
 
             <div className=' md:grid grid-cols-3 mt-10 md:gap-5' >
                 {viewItems?.recipes?.map((recipe, index) => (
-                    <div className=' mb-3 p-5 bg-cyan-200 rounded-md shadow-xl' key={index}>
+                    <div className=' mb-3 p-5 bg-cyan-200 rounded-md shadow-xl' key={index + 1}>
 
                         <h4 ><span className='text-2xl font-bold mt-4'>{recipe?.recipeName}</span></h4>
                         <ul className='mt-3'>

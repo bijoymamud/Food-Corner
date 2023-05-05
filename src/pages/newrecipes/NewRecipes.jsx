@@ -1,7 +1,22 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Services from '../Services/Services';
 
 const NewRecipes = () => {
+
+    const handleBuy = () => {
+        toast.success('Payment Successful', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    };
     return (
         <div>
             <h2 className='text-3xl font-bold text-center'>Our Newest Recipes</h2>
@@ -18,7 +33,7 @@ const NewRecipes = () => {
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
                         <div className="card-actions justify-end">
-                            <div className="badge badge-outline">BUY NOW</div>
+                            <button onClick={handleBuy} className="badge badge-outline p-3 font-bold mt-2">BUY NOW</button>
 
                         </div>
                     </div>
@@ -32,7 +47,7 @@ const NewRecipes = () => {
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
                         <div className="card-actions justify-end">
-                            <div className="badge badge-outline">BUY NOW</div>
+                            <button onClick={handleBuy} className="badge badge-outline p-3 font-bold mt-2">BUY NOW</button>
 
                         </div>
                     </div>
@@ -46,7 +61,7 @@ const NewRecipes = () => {
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
                         <div className="card-actions justify-end">
-                            <div className="badge badge-outline">BUY NOW</div>
+                            <button onClick={() => handleBuy} className="badge badge-outline p-3 font-bold mt-2">BUY NOW</button>
 
                         </div>
                     </div>
@@ -60,7 +75,7 @@ const NewRecipes = () => {
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
                         <div className="card-actions justify-end">
-                            <div className="badge badge-outline">BUY NOW</div>
+                            <button onClick={handleBuy} className="badge badge-outline p-3 font-bold mt-2">BUY NOW</button>
 
                         </div>
                     </div>
@@ -74,7 +89,7 @@ const NewRecipes = () => {
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
                         <div className="card-actions justify-end">
-                            <div className="badge badge-outline">BUY NOW</div>
+                            <button onClick={handleBuy} className="badge badge-outline p-3 font-bold mt-2">BUY NOW</button>
 
                         </div>
                     </div>
@@ -88,14 +103,15 @@ const NewRecipes = () => {
                         </h2>
                         <p>Chicken Parmesan and chicken Parmigiana are just different names for the same exact recipe.</p>
                         <div className="card-actions justify-end">
-                            <div className="badge badge-outline">BUY NOW</div>
+                            <button onClick={handleBuy} className="badge badge-outline p-3 font-bold mt-2">BUY NOW</button>
 
                         </div>
                     </div>
                 </div>
+                <ToastContainer />
             </div>
-            <Services></Services>
 
+            <Services></Services>
 
 
 
